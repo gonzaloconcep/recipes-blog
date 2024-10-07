@@ -1,0 +1,170 @@
+{
+  "en": {
+    "bruschetta": {
+      "title": "Bruschetta",
+      "category": "appetizers",
+      "description": "A delicious Italian appetizer with tomatoes and basil.",
+      "image": "/images/bruschetta.jpg",
+      "ingredients": [
+        "4 slices of Italian bread",
+        "2 ripe tomatoes, diced",
+        "2 cloves of garlic, minced",
+        "4 tbsp extra virgin olive oil",
+        "4 fresh basil leaves, chopped",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "Preheat the oven to 400°F (200°C).",
+        "Toast the bread slices until golden brown.",
+        "Rub one side of each slice with a clove of garlic.",
+        "In a bowl, mix diced tomatoes, minced garlic, olive oil, and chopped basil.",
+        "Season with salt and pepper.",
+        "Top each bread slice with the tomato mixture.",
+        "Serve immediately and enjoy!"
+      ]
+    },
+    "chicken-parmesan": {
+      "title": "Chicken Parmesan",
+      "category": "mainCourses",
+      "description": "A classic Italian-American main course with crispy chicken and melted cheese.",
+      "image": "/images/chicken-parmesan.jpg",
+      "ingredients": [
+        "2 boneless, skinless chicken breasts",
+        "1 cup breadcrumbs",
+        "1/2 cup grated Parmesan cheese",
+        "2 eggs, beaten",
+        "1 cup marinara sauce",
+        "1 cup shredded mozzarella cheese",
+        "2 tbsp olive oil",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "Preheat the oven to 425°F (220°C).",
+        "Season chicken breasts with salt and pepper.",
+        "Mix breadcrumbs and Parmesan cheese in a shallow dish.",
+        "Dip chicken in beaten eggs, then coat with breadcrumb mixture.",
+        "Heat olive oil in a skillet over medium-high heat.",
+        "Cook chicken until golden brown, about 3-4 minutes per side.",
+        "Place chicken in a baking dish, top with marinara sauce and mozzarella cheese.",
+        "Bake for 15-20 minutes until cheese is melted and bubbly.",
+        "Serve hot with pasta or a side salad."
+      ]
+    },
+    "tiramisu": {
+      "title": "Tiramisu",
+      "category": "desserts",
+      "description": "A creamy and indulgent Italian dessert with coffee-soaked ladyfingers.",
+      "image": "/images/tiramisu.jpg",
+      "ingredients": [
+        "6 egg yolks",
+        "3/4 cup white sugar",
+        "2/3 cup milk",
+        "1 1/4 cups heavy cream",
+        "1/2 tsp vanilla extract",
+        "1 pound mascarpone cheese",
+        "1/4 cup strong brewed coffee, room temperature",
+        "2 tbsp rum",
+        "24 ladyfingers",
+        "1 tbsp unsweetened cocoa powder"
+      ],
+      "instructions": [
+        "In a medium saucepan, whisk together egg yolks and sugar until well blended.",
+        "Whisk in milk and cook over medium heat, stirring constantly, until mixture boils.",
+        "Boil gently for 1 minute, remove from heat and allow to cool slightly.",
+        "Cover tightly and chill in refrigerator 1 hour.",
+        "In a medium bowl, beat cream with vanilla until stiff peaks form.",
+        "Whisk mascarpone into yolk mixture until smooth.",
+        "In a small bowl, combine coffee and rum.",
+        "Split ladyfingers in half lengthwise and drizzle with coffee mixture.",
+        "Arrange half of soaked ladyfingers in bottom of a 7x11 inch dish.",
+        "Spread half of mascarpone mixture over ladyfingers, then half of whipped cream over that.",
+        "Repeat layers and sprinkle with cocoa.",
+        "Cover and refrigerate 4 to 6 hours, until set."
+      ]
+    }
+  },
+  "es": {
+    "bruschetta": {
+      "title": "Bruschetta",
+      "category": "appetizers",
+      "description": "Un delicioso aperitivo italiano con tomates y albahaca.",
+      "image": "/images/bruschetta.jpg",
+      "ingredients": [
+        "4 rebanadas de pan italiano",
+        "2 tomates maduros, cortados en cubitos",
+        "2 dientes de ajo, picados",
+        "4 cucharadas de aceite de oliva virgen extra",
+        "4 hojas de albahaca fresca, picadas",
+        "Sal y pimienta al gusto"
+      ],
+      "instructions": [
+        "Precalienta el horno a 200°C.",
+        "Tuesta las rebanadas de pan hasta que estén doradas.",
+        "Frota un lado de cada rebanada con un diente de ajo.",
+        "En un bol, mezcla los tomates en cubitos, el ajo picado, el aceite de oliva y la albahaca picada.",
+        "Sazona con sal y pimienta.",
+        "Cubre cada rebanada de pan con la mezcla de tomate.",
+        "¡Sirve inmediatamente y disfruta!"
+      ]
+    },
+    "chicken-parmesan": {
+      "title": "Pollo Parmesano",
+      "category": "mainCourses",
+      "description": "Un clásico plato principal italoamericano con pollo crujiente y queso fundido.",
+      "image": "/images/chicken-parmesan.jpg",
+      "ingredients": [
+        "2 pechugas de pollo deshuesadas y sin piel",
+        "1 taza de pan rallado",
+        "1/2 taza de queso parmesano rallado",
+        "2 huevos, batidos",
+        "1 taza de salsa marinara",
+        "1 taza de queso mozzarella rallado",
+        "2 cucharadas de aceite de oliva",
+        "Sal y pimienta al gusto"
+      ],
+      "instructions": [
+        "Precalienta el horno a 220°C.",
+        "Sazona las pechugas de pollo con sal y pimienta.",
+        "Mezcla el pan rallado y el queso parmesano en un plato poco profundo.",
+        "Sumerge el pollo en los huevos batidos, luego cúbrelo con la mezcla de pan rallado.",
+        "Calienta el aceite de oliva en una sartén a fuego medio-alto.",
+        "Cocina el pollo hasta que esté dorado, aproximadamente 3-4 minutos por cada lado.",
+        "Coloca el pollo en una fuente para horno, cúbrelo con salsa marinara y queso mozzarella.",
+        "Hornea durante 15-20 minutos hasta que el queso se derrita y burbujee.",
+        "Sirve caliente con pasta o una ensalada."
+      ]
+    },
+    "tiramisu": {
+      "title": "Tiramisú",
+      "category": "desserts",
+      "description": "Un postre italiano cremoso e indulgente con bizcochos empapados en café.",
+      "image": "/images/tiramisu.jpg",
+      "ingredients": [
+        "6 yemas de huevo",
+        "3/4 taza de azúcar blanca",
+        "2/3 taza de leche",
+        "1 1/4 tazas de crema espesa",
+        "1/2 cucharadita de extracto de vainilla",
+        "1 libra de queso mascarpone",
+        "1/4 taza de café fuerte, a temperatura ambiente",
+        "2 cucharadas de ron",
+        "24 bizcochos",
+        "1 cucharada de cacao en polvo sin azúcar"
+      ],
+      "instructions": [
+        "En una cacerola mediana, bate las yemas de huevo y el azúcar hasta que estén bien mezcladas.",
+        "Añade la leche y cocina a fuego medio, removiendo constantemente, hasta que la mezcla hierva.",
+        "Hierve suavemente durante 1 minuto, retira del fuego y deja enfriar un poco.",
+        "Cubre bien y enfría en el refrigerador durante 1 hora.",
+        "En un bol mediano, bate la crema con la vainilla hasta que se formen picos firmes.",
+        "Mezcla el mascarpone con la mezcla de yemas hasta que quede suave.",
+        "En un bol pequeño, combina el café y el ron.",
+        "Parte los bizcochos por la mitad a lo largo y rocíalos con la mezcla de café.",
+        "Coloca la mitad de los bizcochos empapados en el fondo de un molde de 7x11 pulgadas.",
+        "Extiende la mitad de la mezcla de mascarpone sobre los bizcochos, luego la mitad de la crema batida sobre eso.",
+        "Repite las capas y espolvorea con cacao.",
+        "Cubre y refrigera de 4 a 6 horas, hasta que esté firme."
+      ]
+    }
+  }
+}

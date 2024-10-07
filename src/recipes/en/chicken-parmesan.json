@@ -1,0 +1,27 @@
+{
+  "title": "Chicken Parmesan",
+  "category": "Main Courses",
+  "description": "A classic Italian-American main course with crispy chicken, tangy marinara, and melted cheese.",
+  "image": "/images/chicken-parmesan.jpg",
+  "ingredients": [
+    { "name": "2 boneless, skinless chicken breasts", "category": "Meat" },
+    { "name": "1 cup breadcrumbs", "category": "Bread" },
+    { "name": "1/2 cup grated Parmesan cheese", "category": "Dairy" },
+    { "name": "2 eggs, beaten", "category": "Eggs" },
+    { "name": "1 cup marinara sauce", "category": "Sauces" },
+    { "name": "1 cup shredded mozzarella cheese", "category": "Dairy" },
+    { "name": "2 tbsp olive oil", "category": "Oils" },
+    { "name": "Salt and pepper to taste", "category": "Seasonings" }
+  ],
+  "instructions": [
+    { "step": "Preheat the oven to 425°F (220°C).", "image": "/images/chicken-parmesan-step1.jpg" },
+    { "step": "Season chicken breasts with salt and pepper.", "image": "/images/chicken-parmesan-step2.jpg" },
+    { "step": "Mix breadcrumbs and Parmesan cheese in a shallow dish.", "image": "/images/chicken-parmesan-step3.jpg" },
+    { "step": "Dip chicken in beaten eggs, then coat with breadcrumb mixture.", "image": "/images/chicken-parmesan-step4.jpg" },
+    { "step": "Heat olive oil in a skillet over medium-high heat.", "image": "/images/chicken-parmesan-step5.jpg" },
+    { "step": "Cook chicken until golden brown, about 3-4 minutes per side.", "image": "/images/chicken-parmesan-step6.jpg" },
+    { "step": "Place chicken in a baking dish, top with marinara sauce and mozzarella cheese.", "image": "/images/chicken-parmesan-step7.jpg" },
+    { "step": "Bake for 15-20 minutes until cheese is melted and bubbly.", "image": "/images/chicken-parmesan-step8.jpg" },
+    { "step": "Serve hot with pasta or a side salad.", "image": "/images/chicken-parmesan-final.jpg" }
+  ]
+}

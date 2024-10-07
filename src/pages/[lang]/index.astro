@@ -1,0 +1,154 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import { ui, languages, defaultLang, recipes } from '../../i18n/translations';
+
+export function getStaticPaths() {
+  return languages.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = ui[lang as keyof typeof ui];
+const localizedRecipes = recipes[lang as keyof typeof recipes];
+---
+
+<Layout title={t['hero.title']}>
+	<header class="hero">
+		<h1><span class="text-gradient">{t['hero.title']}</span></h1>
+		<p class="tagline">
+			{t['hero.subtitle']}
+		</p>
+	</header>
+	
+	<section class="search">
+		<form action={`/${lang}/search`} method="get">
+			<input type="text" name="q" placeholder={t['search.placeholder']} />
+			<button type="submit">{t['search.button']}</button>
+		</form>
+	</section>
+
+	<section class="featured-recipes">
+		<h2>{t['featured.title']}</h2>
+		<ul class="recipe-grid">
+			{Object.entries(localizedRecipes).map(([id, recipe]) => (
+				<Card
+					href={`/${lang}/recipes/${id}`}
+					title={recipe.title}
+					body={recipe.description}
+					image={recipe.image}
+				/>
+			))}
+		</ul>
+	</section>
+
+	<section class="categories">
+		<h2>{t['categories.title']}</h2>
+		<ul class="category-list">
+			<li><a href={`/${lang}/recipes#appetizers`}>{t['category.appetizers']}</a></li>
+			<li><a href={`/${lang}/recipes#main-courses`}>{t['category.mainCourses']}</a></li>
+			<li><a href={`/${lang}/recipes#desserts`}>{t['category.desserts']}</a></li>
+		</ul>
+	</section>
+</Layout>
+
+<style>
+	.hero {
+		background-image: url('/images/hero-background.jpg');
+		background-size: cover;
+		background-position: center;
+		color: white;
+		text-align: center;
+		padding: 4rem 2rem;
+		margin-bottom: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 1rem;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.tagline {
+		font-size: 1.5rem;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	.search {
+		margin-bottom: 3rem;
+	}
+	.search form {
+		display: flex;
+		gap: 1rem;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	.search input {
+		flex-grow: 1;
+		padding: 0.75rem;
+		font-size: 1rem;
+		border: 2px solid #ccc;
+		border-radius: 4px;
+		transition: border-color 0.3s ease;
+	}
+	.search input:focus {
+		border-color: rgb(var(--accent));
+		outline: none;
+	}
+	.search button {
+		padding: 0.75rem 1.5rem;
+		font-size: 1rem;
+		background-color: rgb(var(--accent));
+		color: white;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+	.search button:hover {
+		background-color: rgb(var(--accent-dark));
+	}
+	.featured-recipes, .categories {
+		margin-bottom: 3rem;
+	}
+	h2 {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+	.recipe-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.category-list {
+		list-style-type: none;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+	}
+	.category-list a {
+		color: #333;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 1.2rem;
+		padding: 0.5rem 1rem;
+		border: 2px solid rgb(var(--accent));
+		border-radius: 4px;
+		transition: all 0.3s ease;
+	}
+	.category-list a:hover {
+		background-color: rgb(var(--accent));
+		color: white;
+	}
+</style>

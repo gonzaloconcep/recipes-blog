@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ui, languages } from '../../i18n/translations';
+
+export function getStaticPaths() {
+  return languages.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = ui[lang];
+---
+
+<Layout title={`${t['nav.about']} - ${t['hero.title']}`}>
+	<h1>{t['nav.about']}</h1>
+	<p>
+		{t['about.description']}
+	</p>
+</Layout>
+
+<style>
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1.5rem;
+	}
+	p {
+		margin-bottom: 1rem;
+		line-height: 1.6;
+	}
+</style>

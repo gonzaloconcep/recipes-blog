@@ -1,0 +1,27 @@
+{
+  "title": "Pollo Parmesano",
+  "category": "Platos Principales",
+  "description": "Un clásico plato principal italoamericano con pollo crujiente, salsa marinara y queso fundido.",
+  "image": "/images/chicken-parmesan.jpg",
+  "ingredients": [
+    { "name": "2 pechugas de pollo deshuesadas y sin piel", "category": "Carne" },
+    { "name": "1 taza de pan rallado", "category": "Pan" },
+    { "name": "1/2 taza de queso parmesano rallado", "category": "Lácteos" },
+    { "name": "2 huevos, batidos", "category": "Huevos" },
+    { "name": "1 taza de salsa marinara", "category": "Salsas" },
+    { "name": "1 taza de queso mozzarella rallado", "category": "Lácteos" },
+    { "name": "2 cucharadas de aceite de oliva", "category": "Aceites" },
+    { "name": "Sal y pimienta al gusto", "category": "Condimentos" }
+  ],
+  "instructions": [
+    { "step": "Precalienta el horno a 220°C.", "image": "/images/chicken-parmesan-step1.jpg" },
+    { "step": "Sazona las pechugas de pollo con sal y pimienta.", "image": "/images/chicken-parmesan-step2.jpg" },
+    { "step": "Mezcla el pan rallado y el queso parmesano en un plato poco profundo.", "image": "/images/chicken-parmesan-step3.jpg" },
+    { "step": "Sumerge el pollo en los huevos batidos, luego cúbrelo con la mezcla de pan rallado.", "image": "/images/chicken-parmesan-step4.jpg" },
+    { "step": "Calienta el aceite de oliva en una sartén a fuego medio-alto.", "image": "/images/chicken-parmesan-step5.jpg" },
+    { "step": "Cocina el pollo hasta que esté dorado, aproximadamente 3-4 minutos por cada lado.", "image": "/images/chicken-parmesan-step6.jpg" },
+    { "step": "Coloca el pollo en una fuente para horno, cúbrelo con salsa marinara y queso mozzarella.", "image": "/images/chicken-parmesan-step7.jpg" },
+    { "step": "Hornea durante 15-20 minutos hasta que el queso se derrita y burbujee.", "image": "/images/chicken-parmesan-step8.jpg" },
+    { "step": "Sirve caliente con pasta o una ensalada.", "image": "/images/chicken-parmesan-final.jpg" }
+  ]
+}

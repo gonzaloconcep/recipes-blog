@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+const recipes = [
+	{
+		id: 'bruschetta',
+		title: 'Bruschetta',
+		category: 'Appetizers',
+		description: 'A delicious Italian appetizer with tomatoes and basil.',
+		image: '/images/bruschetta.jpg',
+		ingredients: ['bread', 'tomatoes', 'garlic', 'olive oil', 'basil'],
+	},
+	{
+		id: 'chicken-parmesan',
+		title: 'Chicken Parmesan',
+		category: 'Main Courses',
+		description: 'A classic Italian-American main course with crispy chicken and melted cheese.',
+		image: '/images/chicken-parmesan.jpg',
+		ingredients: ['chicken', 'breadcrumbs', 'parmesan', 'mozzarella', 'marinara sauce'],
+	},
+	{
+		id: 'tiramisu',
+		title: 'Tiramisu',
+		category: 'Desserts',
+		description: 'A creamy and indulgent Italian dessert with coffee-soaked ladyfingers.',
+		image: '/images/tiramisu.jpg',
+		ingredients: ['ladyfingers', 'coffee', 'mascarpone', 'eggs', 'cocoa'],
+	},
+];
+
+const query = Astro.url.searchParams.get('q')?.toLowerCase() || '';
+const filteredRecipes = recipes.filter(recipe => 
+	recipe.title.toLowerCase().includes(query) || 
+	recipe.description.toLowerCase().includes(query) ||
+	recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(query))
+);
+---
+
+<Layout title="Search Results - Delicious Recipe Blog">
+	<h1>Search Results</h1>
+	{query && <p>Showing results for: "{query}"</p>}
+	
+	{filteredRecipes.length > 0 ? (
+		<ul class="recipe-grid">
+			{filteredRecipes.map((recipe) => (
+				<Card
+					href={`/recipes/${recipe.id}`}
+					title={recipe.title}
+					body={recipe.description}
+					image={recipe.image}
+				/>
+			))}
+		</ul>
+	) : (
+		<p>No recipes found. Try a different search term.</p>
+	)}
+	
+	<a href="/" class="back-link">Back to Home</a>
+</Layout>
+
+<style>
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+	.recipe-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		padding: 0;
+		list-style-type: none;
+	}
+	.back-link {
+		display: inline-block;
+		margin-top: 2rem;
+		color: rgb(var(--accent));
+		text-decoration: none;
+	}
+</style>

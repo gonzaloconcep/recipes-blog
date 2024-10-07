@@ -1,0 +1,183 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+	return [
+		{ params: { id: 'bruschetta' } },
+		{ params: { id: 'chicken-parmesan' } },
+		{ params: { id: 'tiramisu' } },
+	];
+}
+
+const { id } = Astro.params;
+
+const recipes = {
+	bruschetta: {
+		title: 'Bruschetta',
+		category: 'Appetizers',
+		image: '/images/bruschetta.jpg',
+		ingredients: [
+			{ name: '4 slices of Italian bread', category: 'Bread' },
+			{ name: '2 ripe tomatoes, diced', category: 'Vegetables' },
+			{ name: '2 cloves of garlic, minced', category: 'Vegetables' },
+			{ name: '4 tbsp extra virgin olive oil', category: 'Oils' },
+			{ name: '4 fresh basil leaves, chopped', category: 'Herbs' },
+			{ name: 'Salt and pepper to taste', category: 'Seasonings' },
+		],
+		instructions: [
+			{ step: 'Preheat the oven to 400°F (200°C).', image: '/images/bruschetta-step1.jpg' },
+			{ step: 'Toast the bread slices until golden brown.', image: '/images/bruschetta-step2.jpg' },
+			{ step: 'Rub one side of each slice with a clove of garlic.', image: '/images/bruschetta-step3.jpg' },
+			{ step: 'In a bowl, mix diced tomatoes, minced garlic, olive oil, and chopped basil.', image: '/images/bruschetta-step4.jpg' },
+			{ step: 'Season with salt and pepper.', image: '/images/bruschetta-step5.jpg' },
+			{ step: 'Top each bread slice with the tomato mixture.', image: '/images/bruschetta-step6.jpg' },
+			{ step: 'Serve immediately and enjoy!', image: '/images/bruschetta-final.jpg' },
+		],
+	},
+	'chicken-parmesan': {
+		title: 'Chicken Parmesan',
+		category: 'Main Courses',
+		image: '/images/chicken-parmesan.jpg',
+		ingredients: [
+			{ name: '2 boneless, skinless chicken breasts', category: 'Meat' },
+			{ name: '1 cup breadcrumbs', category: 'Bread' },
+			{ name: '1/2 cup grated Parmesan cheese', category: 'Dairy' },
+			{ name: '2 eggs, beaten', category: 'Eggs' },
+			{ name: '1 cup marinara sauce', category: 'Sauces' },
+			{ name: '1 cup shredded mozzarella cheese', category: 'Dairy' },
+			{ name: '2 tbsp olive oil', category: 'Oils' },
+			{ name: 'Salt and pepper to taste', category: 'Seasonings' },
+		],
+		instructions: [
+			{ step: 'Preheat the oven to 425°F (220°C).', image: '/images/chicken-parmesan-step1.jpg' },
+			{ step: 'Season chicken breasts with salt and pepper.', image: '/images/chicken-parmesan-step2.jpg' },
+			{ step: 'Mix breadcrumbs and Parmesan cheese in a shallow dish.', image: '/images/chicken-parmesan-step3.jpg' },
+			{ step: 'Dip chicken in beaten eggs, then coat with breadcrumb mixture.', image: '/images/chicken-parmesan-step4.jpg' },
+			{ step: 'Heat olive oil in a skillet over medium-high heat.', image: '/images/chicken-parmesan-step5.jpg' },
+			{ step: 'Cook chicken until golden brown, about 3-4 minutes per side.', image: '/images/chicken-parmesan-step6.jpg' },
+			{ step: 'Place chicken in a baking dish, top with marinara sauce and mozzarella cheese.', image: '/images/chicken-parmesan-step7.jpg' },
+			{ step: 'Bake for 15-20 minutes until cheese is melted and bubbly.', image: '/images/chicken-parmesan-step8.jpg' },
+			{ step: 'Serve hot with pasta or a side salad.', image: '/images/chicken-parmesan-final.jpg' },
+		],
+	},
+	tiramisu: {
+		title: 'Tiramisu',
+		category: 'Desserts',
+		image: '/images/tiramisu.jpg',
+		ingredients: [
+			{ name: '6 egg yolks', category: 'Eggs' },
+			{ name: '3/4 cup white sugar', category: 'Sweeteners' },
+			{ name: '2/3 cup milk', category: 'Dairy' },
+			{ name: '1 1/4 cups heavy cream', category: 'Dairy' },
+			{ name: '1/2 tsp vanilla extract', category: 'Flavorings' },
+			{ name: '1 pound mascarpone cheese', category: 'Dairy' },
+			{ name: '1/4 cup strong brewed coffee, room temperature', category: 'Beverages' },
+			{ name: '2 tbsp rum', category: 'Alcohol' },
+			{ name: '24 ladyfingers', category: 'Bread' },
+			{ name: '1 tbsp unsweetened cocoa powder', category: 'Baking' },
+		],
+		instructions: [
+			{ step: 'In a medium saucepan, whisk together egg yolks and sugar until well blended.', image: '/images/tiramisu-step1.jpg' },
+			{ step: 'Whisk in milk and cook over medium heat, stirring constantly, until mixture boils.', image: '/images/tiramisu-step2.jpg' },
+			{ step: 'Boil gently for 1 minute, remove from heat and allow to cool slightly.', image: '/images/tiramisu-step3.jpg' },
+			{ step: 'Cover tightly and chill in refrigerator 1 hour.', image: '/images/tiramisu-step4.jpg' },
+			{ step: 'In a medium bowl, beat cream with vanilla until stiff peaks form.', image: '/images/tiramisu-step5.jpg' },
+			{ step: 'Whisk mascarpone into yolk mixture until smooth.', image: '/images/tiramisu-step6.jpg' },
+			{ step: 'In a small bowl, combine coffee and rum.', image: '/images/tiramisu-step7.jpg' },
+			{ step: 'Split ladyfingers in half lengthwise and drizzle with coffee mixture.', image: '/images/tiramisu-step8.jpg' },
+			{ step: 'Arrange half of soaked ladyfingers in bottom of a 7x11 inch dish.', image: '/images/tiramisu-step9.jpg' },
+			{ step: 'Spread half of mascarpone mixture over ladyfingers, then half of whipped cream over that.', image: '/images/tiramisu-step10.jpg' },
+			{ step: 'Repeat layers and sprinkle with cocoa.', image: '/images/tiramisu-step11.jpg' },
+			{ step: 'Cover and refrigerate 4 to 6 hours, until set.', image: '/images/tiramisu-final.jpg' },
+		],
+	},
+};
+
+const recipe = recipes[id];
+---
+
+<Layout title={`${recipe.title} - Delicious Recipe Blog`}>
+	<article class="recipe">
+		<h1>{recipe.title}</h1>
+		<p class="category">Category: {recipe.category}</p>
+		<img src={recipe.image} alt={recipe.title} class="recipe-image" />
+		
+		<section class="ingredients">
+			<h2>Ingredients</h2>
+			{Object.entries(recipe.ingredients.reduce((acc, { name, category }) => {
+				if (!acc[category]) acc[category] = [];
+				acc[category].push(name);
+				return acc;
+			}, {})).map(([category, items]) => (
+				<div>
+					<h3>{category}</h3>
+					<ul>
+						{items.map((item) => (
+							<li>{item}</li>
+						))}
+					</ul>
+				</div>
+			))}
+		</section>
+		
+		<section class="instructions">
+			<h2>Instructions</h2>
+			<ol>
+				{recipe.instructions.map((instruction, index) => (
+					<li>
+						<p>{instruction.step}</p>
+						<img src={instruction.image} alt={`Step ${index + 1}`} class="step-image" />
+					</li>
+				))}
+			</ol>
+		</section>
+	</article>
+</Layout>
+
+<style>
+	.recipe {
+		background-color: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: 0.5rem;
+	}
+	.category {
+		font-style: italic;
+		color: #666;
+		margin-bottom: 1.5rem;
+	}
+	.recipe-image {
+		width: 100%;
+		max-height: 400px;
+		object-fit: cover;
+		border-radius: 8px;
+		margin-bottom: 1.5rem;
+	}
+	h2 {
+		font-size: 1.8rem;
+		margin-top: 1.5rem;
+		margin-bottom: 1rem;
+	}
+	h3 {
+		font-size: 1.4rem;
+		margin-top: 1rem;
+		margin-bottom: 0.5rem;
+	}
+	ul, ol {
+		padding-left: 1.5rem;
+	}
+	li {
+		margin-bottom: 0.5rem;
+	}
+	.step-image {
+		width: 100%;
+		max-width: 400px;
+		border-radius: 8px;
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+	}
+</style>

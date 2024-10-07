@@ -1,0 +1,23 @@
+{
+  "title": "Bruschetta",
+  "category": "Entrantes",
+  "description": "Un delicioso aperitivo italiano con tomates maduros, albahaca fresca y ajo sobre pan tostado.",
+  "image": "/images/bruschetta.jpg",
+  "ingredients": [
+    { "name": "4 rebanadas de pan italiano", "category": "Pan" },
+    { "name": "2 tomates maduros, cortados en cubitos", "category": "Verduras" },
+    { "name": "2 dientes de ajo, picados", "category": "Verduras" },
+    { "name": "4 cucharadas de aceite de oliva virgen extra", "category": "Aceites" },
+    { "name": "4 hojas de albahaca fresca, picadas", "category": "Hierbas" },
+    { "name": "Sal y pimienta al gusto", "category": "Condimentos" }
+  ],
+  "instructions": [
+    { "step": "Precalienta el horno a 200°C.", "image": "/images/bruschetta-step1.jpg" },
+    { "step": "Tuesta las rebanadas de pan hasta que estén doradas.", "image": "/images/bruschetta-step2.jpg" },
+    { "step": "Frota un lado de cada rebanada con un diente de ajo.", "image": "/images/bruschetta-step3.jpg" },
+    { "step": "En un bol, mezcla los tomates en cubitos, el ajo picado, el aceite de oliva y la albahaca picada.", "image": "/images/bruschetta-step4.jpg" },
+    { "step": "Sazona con sal y pimienta.", "image": "/images/bruschetta-step5.jpg" },
+    { "step": "Cubre cada rebanada de pan con la mezcla de tomate.", "image": "/images/bruschetta-step6.jpg" },
+    { "step": "¡Sirve inmediatamente y disfruta!", "image": "/images/bruschetta-final.jpg" }
+  ]
+}

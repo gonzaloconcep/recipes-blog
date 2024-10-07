@@ -1,0 +1,106 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import { ui, languages, defaultLang } from '../../i18n/translations';
+import { getRecipes } from '../../utils/recipeLoader';
+
+export function getStaticPaths() {
+  return languages.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = ui[lang];
+const localizedRecipes = await getRecipes(lang);
+
+const query = Astro.url.searchParams.get('q')?.toLowerCase() || '';
+const filteredRecipes = Object.entries(localizedRecipes).filter(([id, recipe]) => 
+	recipe.title.toLowerCase().includes(query) || 
+	recipe.description.toLowerCase().includes(query) ||
+	recipe.ingredients.some(ingredient => ingredient.name.toLowerCase().includes(query))
+);
+---
+
+<Layout title={`${t['search.button']} - ${t['hero.title']}`}>
+	<h1>{t['search.button']}</h1>
+	{query && <p>{t['search.results']}: "{query}"</p>}
+	
+	<section class="search">
+		<form action={`/${lang}/search`} method="get">
+			<input type="text" name="q" placeholder={t['search.placeholder']} value={query} />
+			<button type="submit">{t['search.button']}</button>
+		</form>
+	</section>
+
+	{filteredRecipes.length > 0 ? (
+		<ul class="recipe-grid">
+			{filteredRecipes.map(([id, recipe]) => (
+				<Card
+					href={`/${lang}/recipes/${id}`}
+					title={recipe.title}
+					body={recipe.description}
+					image={recipe.image}
+				/>
+			))}
+		</ul>
+	) : (
+		<p>{t['no.results']}</p>
+	)}
+	
+	<a href={`/${lang}`} class="back-link">{t['back.home']}</a>
+</Layout>
+
+<style>
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+	.search {
+		margin-bottom: 2rem;
+	}
+	.search form {
+		display: flex;
+		gap: 1rem;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	.search input {
+		flex-grow: 1;
+		padding: 0.75rem;
+		font-size: 1rem;
+		border: 2px solid #ccc;
+		border-radius: 4px;
+		transition: border-color 0.3s ease;
+	}
+	.search input:focus {
+		border-color: rgb(var(--accent));
+		outline: none;
+	}
+	.search button {
+		padding: 0.75rem 1.5rem;
+		font-size: 1rem;
+		background-color: rgb(var(--accent));
+		color: white;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+	.search button:hover {
+		background-color: rgb(var(--accent-dark));
+	}
+	.recipe-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		padding: 0;
+		list-style-type: none;
+	}
+	.back-link {
+		display: inline-block;
+		margin-top: 2rem;
+		color: rgb(var(--accent));
+		text-decoration: none;
+		font-weight: bold;
+	}
+</style>

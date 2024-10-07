@@ -1,0 +1,30 @@
+---
+import { languages } from '../i18n/translations';
+
+const { currentLang } = Astro.props;
+---
+
+<div class="language-picker">
+  {languages.map((lang) => (
+    <a href={`/${lang}${Astro.url.pathname.substring(3)}`} class={currentLang === lang ? 'active' : ''}>
+      {lang.toUpperCase()}
+    </a>
+  ))}
+</div>
+
+<style>
+  .language-picker {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  .language-picker a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  .language-picker a.active {
+    color: rgb(var(--accent));
+  }
+</style>

@@ -1,0 +1,11 @@
+---
+import { languages, defaultLang } from '../i18n/translations';
+
+export const getStaticPaths = () => {
+  return languages.map(lang => ({ params: { lang } }));
+};
+
+const { lang = defaultLang } = Astro.params;
+---
+
+<meta http-equiv="refresh" content={`0;url=/${lang}`} />

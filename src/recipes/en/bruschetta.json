@@ -1,0 +1,23 @@
+{
+  "title": "Bruschetta",
+  "category": "Appetizers",
+  "description": "A delicious Italian appetizer with ripe tomatoes, fresh basil, and garlic on toasted bread.",
+  "image": "/images/bruschetta.jpg",
+  "ingredients": [
+    { "name": "4 slices of Italian bread", "category": "Bread" },
+    { "name": "2 ripe tomatoes, diced", "category": "Vegetables" },
+    { "name": "2 cloves of garlic, minced", "category": "Vegetables" },
+    { "name": "4 tbsp extra virgin olive oil", "category": "Oils" },
+    { "name": "4 fresh basil leaves, chopped", "category": "Herbs" },
+    { "name": "Salt and pepper to taste", "category": "Seasonings" }
+  ],
+  "instructions": [
+    { "step": "Preheat the oven to 400°F (200°C).", "image": "/images/bruschetta-step1.jpg" },
+    { "step": "Toast the bread slices until golden brown.", "image": "/images/bruschetta-step2.jpg" },
+    { "step": "Rub one side of each slice with a clove of garlic.", "image": "/images/bruschetta-step3.jpg" },
+    { "step": "In a bowl, mix diced tomatoes, minced garlic, olive oil, and chopped basil.", "image": "/images/bruschetta-step4.jpg" },
+    { "step": "Season with salt and pepper.", "image": "/images/bruschetta-step5.jpg" },
+    { "step": "Top each bread slice with the tomato mixture.", "image": "/images/bruschetta-step6.jpg" },
+    { "step": "Serve immediately and enjoy!", "image": "/images/bruschetta-final.jpg" }
+  ]
+}
